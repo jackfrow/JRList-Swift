@@ -25,7 +25,11 @@ class ViewController: UIViewController {
     }
     
     @objc func btnClick(){
-        print("btnClick")
+//        print("btnClick")
+        
+        let test = TestViewController()
+        self.navigationController?.pushViewController(test, animated: true)
+        
     }
 
 

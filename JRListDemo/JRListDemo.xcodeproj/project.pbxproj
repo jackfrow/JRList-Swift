@@ -7,14 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45201E682743AD6B003CFDA1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45201E672743AD6B003CFDA1 /* TestViewController.swift */; };
+		45201E6A2743AF1E003CFDA1 /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45201E692743AF1E003CFDA1 /* TestModel.swift */; };
+		45201E6E2743AF72003CFDA1 /* TestCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45201E6D2743AF72003CFDA1 /* TestCell.swift */; };
 		458EEA87273E5FA90095FC87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EEA86273E5FA90095FC87 /* AppDelegate.swift */; };
 		458EEA8B273E5FA90095FC87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EEA8A273E5FA90095FC87 /* ViewController.swift */; };
 		458EEA8E273E5FA90095FC87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458EEA8C273E5FA90095FC87 /* Main.storyboard */; };
 		458EEA90273E5FAB0095FC87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 458EEA8F273E5FAB0095FC87 /* Assets.xcassets */; };
 		458EEA93273E5FAB0095FC87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 458EEA91273E5FAB0095FC87 /* LaunchScreen.storyboard */; };
+		458EEA9E273E67CC0095FC87 /* JRListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EEA9D273E67CC0095FC87 /* JRListViewController.swift */; };
+		458EEAA2273E74240095FC87 /* JRModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 458EEAA1273E74240095FC87 /* JRModelProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45201E672743AD6B003CFDA1 /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
+		45201E692743AF1E003CFDA1 /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		45201E6D2743AF72003CFDA1 /* TestCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestCell.swift; sourceTree = "<group>"; };
 		458EEA83273E5FA90095FC87 /* JRListDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JRListDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		458EEA86273E5FA90095FC87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		458EEA8A273E5FA90095FC87 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +30,8 @@
 		458EEA8F273E5FAB0095FC87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		458EEA92273E5FAB0095FC87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		458EEA94273E5FAB0095FC87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		458EEA9D273E67CC0095FC87 /* JRListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JRListViewController.swift; sourceTree = "<group>"; };
+		458EEAA1273E74240095FC87 /* JRModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JRModelProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +67,9 @@
 				458EEA9A273E63870095FC87 /* JRList */,
 				458EEA86273E5FA90095FC87 /* AppDelegate.swift */,
 				458EEA8A273E5FA90095FC87 /* ViewController.swift */,
+				45201E672743AD6B003CFDA1 /* TestViewController.swift */,
+				45201E692743AF1E003CFDA1 /* TestModel.swift */,
+				45201E6D2743AF72003CFDA1 /* TestCell.swift */,
 				458EEA8C273E5FA90095FC87 /* Main.storyboard */,
 				458EEA8F273E5FAB0095FC87 /* Assets.xcassets */,
 				458EEA91273E5FAB0095FC87 /* LaunchScreen.storyboard */,
@@ -68,6 +81,8 @@
 		458EEA9A273E63870095FC87 /* JRList */ = {
 			isa = PBXGroup;
 			children = (
+				458EEAA1273E74240095FC87 /* JRModelProtocol.swift */,
+				458EEA9D273E67CC0095FC87 /* JRListViewController.swift */,
 			);
 			path = JRList;
 			sourceTree = "<group>";
@@ -142,8 +157,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45201E6E2743AF72003CFDA1 /* TestCell.swift in Sources */,
+				45201E682743AD6B003CFDA1 /* TestViewController.swift in Sources */,
 				458EEA8B273E5FA90095FC87 /* ViewController.swift in Sources */,
 				458EEA87273E5FA90095FC87 /* AppDelegate.swift in Sources */,
+				45201E6A2743AF1E003CFDA1 /* TestModel.swift in Sources */,
+				458EEA9E273E67CC0095FC87 /* JRListViewController.swift in Sources */,
+				458EEAA2273E74240095FC87 /* JRModelProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,14 +313,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L63DQ52CN9;
 				INFOPLIST_FILE = JRListDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jr.JRListDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,14 +334,16 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L63DQ52CN9;
 				INFOPLIST_FILE = JRListDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jr.JRListDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
