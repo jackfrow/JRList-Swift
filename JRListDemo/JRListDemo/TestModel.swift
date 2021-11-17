@@ -10,10 +10,6 @@ import UIKit
 
 
 struct TestModel:JRModelProtocol {
-    
-    var modelHeigth: CGFloat{
-        return 100
-    }
 
     var title:String?
 

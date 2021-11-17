@@ -29,8 +29,14 @@ extension JRModelProtocol{
 }
 
 
-protocol JRUIAttach:UITableViewCell {
+protocol JRUIAttach {
     func render(with row:JRModelProtocol)
+   static func renderHeigeht() -> CGFloat 
+}
+
+
+protocol JRCellUIAttach:UITableViewCell,JRUIAttach {
+    
 }
 
 

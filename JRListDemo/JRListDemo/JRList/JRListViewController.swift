@@ -7,7 +7,7 @@
 
 import UIKit
 
-typealias MapBlock = (_ cellClass:String)->(UITableViewCell.Type)
+typealias MapBlock = (_ cellClass:String)->(JRCellUIAttach.Type)
 
 class JRListViewController: UIViewController {
 
@@ -25,10 +25,8 @@ class JRListViewController: UIViewController {
     
     func loadCellModelMapping()  {
         //implement by subclass.
-        
     }
 
-    
     // MARK: - lazy
     lazy var tableView: UITableView = {
         let tb = UITableView(frame: self.view.bounds, style: style)
@@ -59,9 +57,11 @@ extension JRListViewController:UITableViewDelegate,UITableViewDataSource{
     
     
     
+    //需要改成从cell从取高度
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         let model = modelAtIndePath(indexPath: indexPath)
-        return model.modelHeigth
+        let cell = mappedCellClassForModel(model: model)
+        return cell.renderHeigeht()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -105,13 +105,17 @@ extension JRListViewController{
     
     }
     
-    private func mappedCellClassForModel(model:JRModelProtocol) -> UITableViewCell.Type{
+    private func mappedCellClassForModel(model:JRModelProtocol) -> JRCellUIAttach.Type{
         
         guard let block = self.modelCellBlockMap[model.modelCellString] else {
             fatalError("model not register \(model.modelCellString)")
         }
         return block(model.modelCellString)
         
+    }
+    
+    private func mapA(model:JRModelProtocol) -> JRUIAttach?{
+        return nil
     }
     
     
@@ -132,7 +136,7 @@ extension JRListViewController{
 // MARK: - API
 extension JRListViewController{
  
-    func register(modelClass:Any, cellClass:UITableViewCell.Type)  {
+    func register(modelClass:Any, cellClass:JRCellUIAttach.Type)  {
     
         register(modelClass: modelClass ) { _ in
             return cellClass
@@ -140,7 +144,6 @@ extension JRListViewController{
     }
     
     func register(modelClass:Any,cellBlock:@escaping MapBlock)  {
-        
         let key = "\(modelClass)"
         modelCellBlockMap[key] = cellBlock
         
