@@ -81,8 +81,8 @@ extension JRListViewController:UITableViewDelegate,UITableViewDataSource{
             cell = cellClass.init(style: .default , reuseIdentifier: reuseIdentifier)
         }
         
-        if let cell = cell as? JRUIAttach{
-            cell.render(with: model)
+        if var cell = cell as? JRUIAttach{
+            cell.model = model
         }
     
         return cell!

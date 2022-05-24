@@ -7,13 +7,11 @@
 
 import UIKit
 
-class TestCell: UITableViewCell,JRCellUIAttach {
-    
+class TestCell: JRBasicTableViewCell,JRCellUIAttach {
     
     static func renderHeigeht() -> CGFloat {
         return 100
     }
-    
 
     func render(with row: JRModelProtocol) {
         if let row = row as? TestModel{

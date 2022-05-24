@@ -10,9 +10,8 @@ import UIKit
 
 
 protocol JRModelProtocol {
-    
+
     var modelCellString:String { get }
-    var modelHeigth:CGFloat { get }
     
 }
 
@@ -21,17 +20,13 @@ extension JRModelProtocol{
     var modelCellString:String {
         return "\(type(of: self))"
     }
-    
-    var modelHeigth:CGFloat {
-        return 44
-    }
-    
+
 }
 
 
 protocol JRUIAttach {
-    func render(with row:JRModelProtocol)
-   static func renderHeigeht() -> CGFloat 
+    var model:JRModelProtocol? { get set }
+   static func renderHeigeht() -> CGFloat
 }
 
 
