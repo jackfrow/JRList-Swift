@@ -124,8 +124,11 @@ extension JRListViewController{
         guard let cls = cellClass else {
             fatalError("error class name \(String(describing: cellClass))")
         }
-        
-        return "\(type(of: cls))"
+      
+        let out =  String(describing: cls)
+        return out
+      
+//         return "\(type(of: cls))"
         
     }
 
